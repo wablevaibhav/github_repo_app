@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ttt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textAllCaps="true"
+        android:text="Search Issues In GitHub Repo \n By vaibhav wable"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/ttt"
+        android:layout_marginTop="80dp"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search Issues" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        tools:listitem="@layout/issue_item" />
+</RelativeLayout>

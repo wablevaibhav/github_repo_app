@@ -1,0 +1,49 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/userImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:contentDescription="User Image"
+        android:src="@drawable/github" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/userImageView"
+        android:layout_alignParentTop="true"
+        android:text="Issue Title"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/createdDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_alignStart="@id/titleTextView"
+        android:text="Created Date: September 1, 2023" />
+
+    <TextView
+        android:id="@+id/closedDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createdDateTextView"
+        android:layout_alignStart="@id/titleTextView"
+        android:text="Closed Date: September 5, 2023" />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/closedDateTextView"
+        android:layout_alignStart="@id/titleTextView"
+        android:text="User: John Doe" />
+</RelativeLayout>
